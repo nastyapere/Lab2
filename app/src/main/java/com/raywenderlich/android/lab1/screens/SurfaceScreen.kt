@@ -28,5 +28,13 @@ fun SurfaceScreen(modifier: Modifier = Modifier){
 
 @Composable
 fun MySurface(modifier: Modifier) {
-    //TODO
+    Surface(
+        modifier = modifier.size(100.dp),
+        color = Color.LightGray,
+        contentColor = colorResource(id = R.color.colorPrimary),
+        elevation = 1.dp,
+        border = BorderStroke(1.dp, Color.Black)
+    ){
+        MyColumn()
+    }
 }

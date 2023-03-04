@@ -23,6 +23,20 @@ fun BowScreen(){
 
 @Composable
 fun MyBox(
-    modifier: Modifier = Modifier) {
-   //TODO
+    modifier: Modifier = Modifier,
+    contentModifier: Modifier = Modifier
+) {
+    Box(modifier = modifier.fillMaxSize()) {
+        Text(
+            text = stringResource(id = R.string.one),
+            fontSize = 22.sp,
+            modifier = contentModifier.align(Layout.Alignment.TopStart)
+        )
+
+        Text(
+            text = stringResource(id = R.string.two),
+            fontSize = 22.sp,
+            modifier = contentModifier.align(Layout.Alignment.BottomEnd)
+        )
+    }
 }

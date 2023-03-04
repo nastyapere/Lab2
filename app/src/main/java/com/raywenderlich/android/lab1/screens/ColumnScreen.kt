@@ -24,5 +24,17 @@ fun ColumnScreen(){
 
 @Composable
 fun MyColumn() {
-    //TODO
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceEvenly,
+        modifier = Modifier.fillMaxSize()
+    ) {
+
+        THREE_ELEMENT_LIST.forEach { textResId ->
+            Text(
+                text = stringResource(id = textResId),
+                fontSize = 22.sp
+            )
+        }
+    }
 }

@@ -26,5 +26,15 @@ fun RowScreen(){
 
 @Composable
 fun MyRow(){
-    //TODO
+    Row(verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        modifier = Modifier.fillMaxHeight()) {
+
+        THREE_ELEMENT_LIST.forEach { textResId ->
+            Text(
+                text = stringResource(id = textResId),
+                fontSize = 18.sp
+            )
+        }
+    }
 }
